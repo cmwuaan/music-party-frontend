@@ -1,5 +1,4 @@
 import Button from '../components/Button';
-import ToggleButton from '../components/ToggleButton';
 import { FaGoogle } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import { FaApple } from 'react-icons/fa';
