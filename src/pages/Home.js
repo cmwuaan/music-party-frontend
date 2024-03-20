@@ -128,7 +128,7 @@ function Home() {
                     <h3 className='text-gray-400 text-[14px] pb-4'>
                         The most played tracks on MusicParty this week
                     </h3>
-                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
+                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
                         {Data.slice(0, 6).map((song, index) => (
                             <SongCard
                                 key={index}
@@ -141,7 +141,7 @@ function Home() {
                         url={'/AllTopArtists'}
                         subHeader={'Top Artists'}
                     />
-                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
+                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
                         {fakeArtistData.slice(0, 6).map((artist, index) => (
                             <ArtistCard
                                 key={index}
@@ -154,18 +154,17 @@ function Home() {
                         url={'/TrendingAlbum'}
                         subHeader={'Album phổ biến'}
                     />
-                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
+                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
                         {albumsData.slice(0, 6).map((album, index) => (
                             <AlbumCard
                                 key={index}
                                 album={album}
-                                listOfArtist={albumsData}
                             />
                         ))}
                     </div>
 
                     <SectionHeader url={'/ForYou'} subHeader={'Dành cho bạn'} />
-                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
+                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
                         {Data.slice(0, 6).map((song, index) => (
                             <SongCard
                                 key={index}
@@ -178,7 +177,7 @@ function Home() {
                         url={'/RecentlyReleased'}
                         subHeader={'Mới phát gần đây'}
                     />
-                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
+                    <div className='text-white my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 '>
                         {Data.slice(0, 6).map((song, index) => (
                             <SongCard
                                 key={index}

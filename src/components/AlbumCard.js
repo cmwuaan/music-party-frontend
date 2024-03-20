@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaPlayCircle } from 'react-icons/fa';
 
-const AlbumCard = ({ album, listOfAlbum }) => {
+const AlbumCard = ({ album }) => {
     const [isHovered, setIsHovered] = useState(false);
-
+    const navigate = useNavigate();
+    const [isClicked, setIsClicked] = useState(false);
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
+    const handleClick = () => {
+        setIsClicked(true);
+        navigate(`/album-detail`);
+    };
     return (
         <div
-            className={`bg-[#202020] w-full text-white flex flex-col pt-2 md:pt-0 items-center gap-2 cursor-pointer hover:bg-gray-700 rounded-lg pb-4 2xl:items-start text-center md:text-start ${
+            className={`bg-[#202020] w-full text-white flex flex-col pt-2 md:pt-0 items-center gap-2 cursor-pointer hover:bg-gray-700 rounded-lg pb-4 2xl:items-start text-center md:text-start  ${
                 isHovered ? 'hover:opacity-100' : 'hover:opacity-0'
-            }`}
+            } `}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
         >
             <div className='relative'>
                 <img
