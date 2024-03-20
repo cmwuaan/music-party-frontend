@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Signup() {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-4">
         <h2 className="text-white font-bold text-2xl mt-12">Sign up</h2>
         <form action="" className="flex flex-col w-[380px] gap-4">
           <div className="flex flex-col mt-4">
@@ -83,7 +83,7 @@ function Signup() {
 
         <div className="flex items-center justify-center gap-2 mt-4">
           <p className="text-white font-medium text-sm">Already have an account?</p>
-          <Link to="/signup" className="text-white font-medium text-sm underline">
+          <Link to="/signin" className="text-white font-medium text-sm underline">
             Sign in to Music Party
           </Link>
         </div>

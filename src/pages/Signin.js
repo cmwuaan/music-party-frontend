@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Signin() {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-4">
         <h2 className="text-white font-bold text-2xl mt-12">Log in to Music Party</h2>
         <div className="flex flex-col gap-4 mt-6">
           <Button
