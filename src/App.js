@@ -21,6 +21,10 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path ="/room" element={<Room />}/>
           <Route path ="/roomdetail" element={<RoomDetails />}/>  
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/AccountSettings" element={<AccountSettings />} />
+          <Route path="/AllPlaylists" element={<AllPlaylists />} />
+          <Route path="/AllUploadSongs" element={<AllUploadSong />} />
         </Routes>
       </div>
     </>
