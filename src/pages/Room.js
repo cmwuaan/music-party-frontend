@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UserAvatar from '../components/UserAvatar';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { RiAddLine } from 'react-icons/ri';
 import PublicRoom from '../components/PublicRoom';
 import teamwork from '../assets/images/teamwork.png';
@@ -10,9 +10,9 @@ function Room() {
   const openCreateModal = () => {
     setShowCreateRoom(!showCreateRoom);
   };
-  const handleRoomDetail = () => {
-    <Link to="/roomdetail">View Room Detail</Link>;
-  };
+  //   const handleRoomDetail = () => {
+  //     <Link to="/roomdetail">View Room Detail</Link>;
+  //   };
 
   return (
     <div>
