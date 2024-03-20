@@ -126,6 +126,6 @@ With these technologies, we are extremely confident in developing our ideas:
 - ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
 <h2 id="contributor">Contributors🤝</h2>
-<a href="https://github.com/kenVis1529/cookhub-frontend/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kenVis1529/cookhub-frontend" />
+<a href="https://github.com/cmwuaan/music-party-frontend/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
 </a>
