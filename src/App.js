@@ -1,7 +1,9 @@
 import About from './pages/About';
 import Home from './pages/Home';
+import Room from './pages/Room';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
+import RoomDetails from './pages/RoomDetail';
 import { Route, Routes } from 'react-router-dom';
 import Upload from './pages/Upload';
 import Header from './components/Header';
@@ -17,6 +19,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload />} />
+          <Route path ="/room" element={<Room />}/>
+          <Route path ="/roomdetail" element={<RoomDetails />}/>  
         </Routes>
       </div>
     </>
