@@ -7,15 +7,15 @@ import Upload from './pages/Upload';
 
 function App() {
   return (
-      <div className='px-2 pt-6'>
-          <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/signin' element={<Signin />} />
-              <Route path='/signup' element={<Signup />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/upload' element={<Upload />} />
-          </Routes>
-      </div>
+    <div className="px-2 pt-6">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/upload" element={<Upload />} />
+      </Routes>
+    </div>
   );
 }
 
