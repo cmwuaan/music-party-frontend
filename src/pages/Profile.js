@@ -1,14 +1,14 @@
-import React from "react";
-import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import PlaylistDefaultIMG from "../assets/images/PlaylistDefaultImg.png";
-import { IoAddCircle } from "react-icons/io5";
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import PlaylistDefaultIMG from '../assets/images/PlaylistDefaultImg.png';
+import { IoAddCircle } from 'react-icons/io5';
 
 export default function Profile() {
   const handleAddPlaylist = () => {
-    document.getElementById("my_modal_3").showModal();
+    document.getElementById('my_modal_3').showModal();
   };
 
   const handleClickCloseButton = (e) => {
@@ -17,7 +17,7 @@ export default function Profile() {
   };
 
   const handleCloseModal = () => {
-    const modal = document.getElementById("my_modal_3");
+    const modal = document.getElementById('my_modal_3');
     if (modal) {
       modal.close();
     }
@@ -61,7 +61,7 @@ export default function Profile() {
                 <input
                   type="file"
                   accept="image/*"
-                  style={{ display: "none" }}
+                  style={{ display: 'none' }}
                   //ref={fileInputRef}
                 />
               </div>
@@ -75,21 +75,13 @@ export default function Profile() {
             <div className="flex items-baseline mt-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
                 <p className="text-white font-bold text-2xl ">Your playlist</p>
-                <IoAddCircle
-                  className=" text-white text-2xl cursor-pointer"
-                  onClick={handleAddPlaylist}
-                />
+                <IoAddCircle className=" text-white text-2xl cursor-pointer" onClick={handleAddPlaylist} />
               </div>
-              <Link
-                to="/AllPlaylists"
-                className="text-white font-semibold text-[12px] hover:underline cursor-pointer"
-              >
+              <Link to="/AllPlaylists" className="text-white font-semibold text-[12px] hover:underline cursor-pointer">
                 Show All
               </Link>
             </div>
-            <p className="text-gray-400 text-[12px] mt-2">
-              Only visible for you
-            </p>
+            <p className="text-gray-400 text-[12px] mt-2">Only visible for you</p>
             <div
               className="text-white mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 
                         2xl:grid-cols-6 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-6 "
@@ -100,29 +92,17 @@ export default function Profile() {
                           pb-4 pt-2 px-[10px] items-center 2xl:items-start text-center md:text-start`}
               >
                 <div className="w-40 h-40 ">
-                  <img
-                    src={PlaylistDefaultIMG}
-                    alt="PlaylistImg"
-                    className=" rounded w-40 h-40 object-cover"
-                  />
+                  <img src={PlaylistDefaultIMG} alt="PlaylistImg" className=" rounded w-40 h-40 object-cover" />
                 </div>
-                <p className="font-semibold text-base mt-2 truncate w-full">
-                  PlaylistName
-                </p>
-                <p className="text-xs text-gray-400 truncate w-full">
-                  playlistID
-                </p>
+                <p className="font-semibold text-base mt-2 truncate w-full">PlaylistName</p>
+                <p className="text-xs text-gray-400 truncate w-full">playlistID</p>
               </div>
             </div>
             {/* Upload Song */}
             <div className="flex items-baseline mt-8 justify-between">
               <div className="flex flex-col gap-2">
-                <p className="text-white font-bold text-2xl ">
-                  Your upload songs
-                </p>
-                <p className="text-gray-400 text-[12px]">
-                  Only visible for you
-                </p>
+                <p className="text-white font-bold text-2xl ">Your upload songs</p>
+                <p className="text-gray-400 text-[12px]">Only visible for you</p>
               </div>
               <Link
                 to="/AllUploadSongs"
@@ -142,16 +122,10 @@ export default function Profile() {
                    hover:bg-gray-800 rounded-lg pb-4 pt-2 px-[10px] 2xl:items-start text-center md:text-start "
                 >
                   <div className="w-40 h-40 relative">
-                    <img
-                      src={PlaylistDefaultIMG}
-                      alt="SongImage"
-                      className="rounded object-cover h-40 w-40"
-                    />
+                    <img src={PlaylistDefaultIMG} alt="SongImage" className="rounded object-cover h-40 w-40" />
                   </div>
                   <Link>musicName</Link>
-                  <p className="text-xs text-gray-400 truncate w-full">
-                    author
-                  </p>
+                  <p className="text-xs text-gray-400 truncate w-full">author</p>
                 </div>
               </div>
             </div>
@@ -168,9 +142,7 @@ export default function Profile() {
               >
                 ✕
               </button>
-              <h3 className="font-bold text-xl text-center pt-2">
-                Create new PlayList!
-              </h3>
+              <h3 className="font-bold text-xl text-center pt-2">Create new PlayList!</h3>
               <div className="flex flex-row gap-2 items-center ">
                 <p className="py-4 font-semibold">Playlist Title</p>
                 <span className="text-red-600">*</span>
@@ -196,10 +168,7 @@ export default function Profile() {
                     // onChange={handleRadioChange}
                     required
                   />
-                  <label
-                    htmlFor="Public"
-                    className="cursor-pointer py-2 px-4 rounded text-sm text-gray-300 "
-                  >
+                  <label htmlFor="Public" className="cursor-pointer py-2 px-4 rounded text-sm text-gray-300 ">
                     Public
                   </label>
                 </div>
@@ -212,16 +181,12 @@ export default function Profile() {
                     // onChange={handleRadioChange}
                     required
                   />
-                  <label
-                    htmlFor="Private"
-                    className="cursor-pointer py-2 px-4 rounded text-sm text-gray-300"
-                  >
+                  <label htmlFor="Private" className="cursor-pointer py-2 px-4 rounded text-sm text-gray-300">
                     Private
                   </label>
                 </div>
                 <p className="ml-7 text-[10px] text-gray-400">
-                  Only you and people share a secret link with will be able to
-                  listen to this track
+                  Only you and people share a secret link with will be able to listen to this track
                 </p>
               </div>
               <button
@@ -233,10 +198,6 @@ export default function Profile() {
             </form>
           </div>
         </dialog>
-      </div>
-
-      <div className="pt-10">
-        <Footer />
       </div>
     </div>
   );

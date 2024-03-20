@@ -4,6 +4,10 @@ import Room from './pages/Room';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import RoomDetails from './pages/RoomDetail';
+import Profile from './pages/Profile';
+import AccountSettings from './pages/AccountSettings';
+import AllPlaylists from './pages/AllPlaylists';
+import AllUploadSong from './pages/AllUploadSongs';
 import { Route, Routes } from 'react-router-dom';
 import Upload from './pages/Upload';
 import Header from './components/Header';
@@ -19,12 +23,12 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload />} />
-          <Route path ="/room" element={<Room />}/>
-          <Route path ="/roomdetail" element={<RoomDetails />}/>  
+          <Route path="/room" element={<Room />} />
+          <Route path="/room-detail" element={<RoomDetails />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/AccountSettings" element={<AccountSettings />} />
-          <Route path="/AllPlaylists" element={<AllPlaylists />} />
-          <Route path="/AllUploadSongs" element={<AllUploadSong />} />
+          <Route path="/account-settings" element={<AccountSettings />} />
+          <Route path="/all-playlists" element={<AllPlaylists />} />
+          <Route path="/all-upload-songs" element={<AllUploadSong />} />
         </Routes>
       </div>
     </>
