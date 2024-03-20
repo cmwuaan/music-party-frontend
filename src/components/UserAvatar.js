@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import user from '../assets/images/user.jpg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const UserAvatar = () => {

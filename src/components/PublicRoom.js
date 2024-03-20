@@ -1,7 +1,6 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import musicmeeting from '../assets/images/musicmeeting.jpg';
-import { Link } from 'react-router-dom';
 const PublicRoom = () => {
   const navigate = useNavigate();
   const handleRoomDetail = () => {
