@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="px-2 pt-6">
+      <div className="pt-10 p-6">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
