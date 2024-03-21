@@ -5,15 +5,14 @@ const PublicRoom = () => {
   const navigate = useNavigate();
   const handleRoomDetail = () => {
     // const navigate = useNavigate();
-    navigate('/roomdetail');
+    navigate('/room-detail');
     // <Navigate to ='/roomdetail'></Navigate>
     // <Link to ='/roomdetail'></Link>
   };
   return (
     <div>
-      <button className="text-white size-30" onClick={''} />
+      <button className="text-white size-30" onClick={() => {}} />
       <div className="flex ">
-        {/* <button className='text-white w-10 h-10 bg-white pl-[-10] justify-end'/> */}
         <div
           className="bg-[#181818] w-full text-white flex items-center flex-col gap-4 cursor-pointer hover:bg-gray-800 rounded-lg py-2 px-4"
           onClick={handleRoomDetail}
