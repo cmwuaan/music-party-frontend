@@ -67,7 +67,7 @@ npm install
 npm start
 ```
 
-<h2 id="usage">Usage📱</h2>
+<h2 id="usage">Usage💻</h2>
 
 Music Party has developed 2 main features to address the issue, including `Listen everywhere` and `Music streaming`
 
