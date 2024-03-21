@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/49c212ba-5af8-4cc0-9707-421b4076db84.png" alt="Music Party" width="400">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/49c212ba-5af8-4cc0-9707-421b4076db84" alt="Music Party" width="400">
   
   <br>
   <br>
