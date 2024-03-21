@@ -1,4 +1,4 @@
-![image](https://github.com/cmwuaan/music-party-frontend/assets/90759146/55043985-852f-4523-9037-3b83c2991d39)<h1 align="center">
+<h1 align="center">
   <br>
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/49c212ba-5af8-4cc0-9707-421b4076db84" alt="Music Party" width="200">
   
@@ -76,9 +76,9 @@ Music Party has developed 2 main features to address the issue, including `Liste
 > Discover, share, and enjoy your favorite tunes with our seamless listening feature.
 
 <p align="center">
-  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/bef88d64-c810-4014-844a-bd78c3b7bad1" alt="About" width="200">
-  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/5880afc1-9abb-452a-8234-0974aa1b6e81" alt="Home" width="200">
-  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/60b6e9c5-ec97-4b99-9494-bba4f72d34e5" alt="Album details" width="200">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/bef88d64-c810-4014-844a-bd78c3b7bad1" alt="About" width="1000">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/5880afc1-9abb-452a-8234-0974aa1b6e81" alt="Home" width="1000">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/60b6e9c5-ec97-4b99-9494-bba4f72d34e5" alt="Album details" width="1000">
 </p>
 
 **`MUSIC STREAMING`**
