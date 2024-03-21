@@ -1,9 +1,10 @@
 <h1 align="center">
   <br>
-  <img src="https://user-images.githubusercontent.com/90759146/229393835-499f48c9-2d1e-4df8-a4c7-7f9b499da880.png" alt="ProtectED" width="400">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/49c212ba-5af8-4cc0-9707-421b4076db84.png" alt="Music Party" width="400">
+  
   <br>
   <br>
-  🧑‍🍳 Cookhub 🧑‍🍳
+  🎼 Music Party 🎼
   <br>
   <br>
 </h1>
@@ -11,17 +12,17 @@
 <h4 align="center">The ProtectED project aims at a highly sustainable goal of addressing the issue of school violence.</h4>
 
 <p align="center">
-  <a href="https://flutter.dev">
-    <img src="https://img.shields.io/badge/flutter%20version-%3E%3D2.18.6-blue"
-         alt="Flutter">
+  <a href="https://react.dev">
+    <img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge"
+         alt="React">
   </a>
-  <a href="https://firebase.google.com/">
-    <img src="https://img.shields.io/badge/firebase-%20-yellow"
-         alt="Firebase">
+  <a href="https://tailwindcss.com">
+    <img src="https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss"
+         alt="Tailwind">
   </a>
-  <a href="https://mapsplatform.google.com/">
-    <img src="https://img.shields.io/badge/google--map--platform-%20-green"
-         alt="Google Map Platform">
+  <a href="https://nodejs.org">
+    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+         alt="NodeJS">
   </a>
 </p>
 
@@ -118,14 +119,14 @@ ProtectED has developed 2 main features to address the issue, including `Chat wi
 
 <h2 id="technologies">Technologies🤖</h2>
 
-> Flutter, Firebase, and Google Map Platform are Google's technologies that allow us to realize the solution by creating a high-performance mobile application.
+> React, Tailwind, and NodeJS that allow us to realize the solution by creating a high-performance web application.
 
 With these technologies, we are extremely confident in developing our ideas:
-- ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-- ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-- ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+- ![React](https://shields.io/badge/react-black?logo=react&style=for-the-badge)
+- ![Tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <h2 id="contributor">Contributors🤝</h2>
 <a href="https://github.com/cmwuaan/music-party-frontend/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontendd" />
+  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
 </a>
