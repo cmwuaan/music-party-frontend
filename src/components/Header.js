@@ -18,6 +18,9 @@ function Header() {
         <Link to="/about">
           <li className="hover:text-white duration-200">About</li>
         </Link>
+        <Link to="/room">
+          <li className="hover:text-white duration-200">Room</li>
+        </Link>
         <Link to="/signin">
           <li className="px-6 py-2 bg-white rounded-full text-black hover:bg-gray-200 hover:scale-105 duration-200">
             Log in
