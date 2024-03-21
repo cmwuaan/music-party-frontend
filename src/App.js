@@ -27,7 +27,7 @@ function App() {
           <Route path="/room" element={<Room />} />
           <Route path="/room-detail" element={<RoomDetails />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path='/album-detail' element={<AlbumDetail/>}/>
+          <Route path="/album-detail" element={<AlbumDetail />} />
           <Route path="/account-settings" element={<AccountSettings />} />
           <Route path="/all-playlists" element={<AllPlaylists />} />
           <Route path="/all-upload-songs" element={<AllUploadSong />} />
