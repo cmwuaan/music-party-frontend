@@ -32,7 +32,7 @@ const UserAvatar = () => {
             <Link to="/reportissues">Report issues</Link>
           </li>
           <li className="py-2 px-4 hover:bg-gray-800">
-            <Link to="/" onClick={''}>
+            <Link to="/" onClick={() => {}}>
               Sign out
             </Link>
           </li>
