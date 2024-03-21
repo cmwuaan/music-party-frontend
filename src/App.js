@@ -12,11 +12,13 @@ import AllUploadSong from './pages/AllUploadSongs';
 import { Route, Routes } from 'react-router-dom';
 import Upload from './pages/Upload';
 import Header from './components/Header';
+import ScrollBehavior from './components/ScrollBehavior';
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollBehavior />
       <div className="pt-10 p-6">
         <Routes>
           <Route path="/" element={<Home />} />
