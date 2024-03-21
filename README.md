@@ -127,5 +127,5 @@ With these technologies, we are extremely confident in developing our ideas:
 
 <h2 id="contributor">Contributors🤝</h2>
 <a href="https://github.com/cmwuaan/music-party-frontend/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
+  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontendd" />
 </a>
