@@ -77,9 +77,9 @@ Music Party has developed 2 main features to address the issue, including `Liste
 
 <p align="center">
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/bef88d64-c810-4014-844a-bd78c3b7bad1" alt="About" width="1000">
-  
+  <br/>
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/5880afc1-9abb-452a-8234-0974aa1b6e81" alt="Home" width="1000">
-  
+  <br/>
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/60b6e9c5-ec97-4b99-9494-bba4f72d34e5" alt="Album details" width="1000">
 </p>
 
@@ -89,6 +89,7 @@ Music Party has developed 2 main features to address the issue, including `Liste
 
 <p align="center">
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/7828e8e3-5994-4988-baac-67fb3a8ccdf1" alt="Music streaming" width="1000">
+  <br/>
 </p>
 
 <h2 id="technologies">Technologies🤖</h2>
