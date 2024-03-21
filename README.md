@@ -1,4 +1,4 @@
-<h1 align="center">
+![image](https://github.com/cmwuaan/music-party-frontend/assets/90759146/55043985-852f-4523-9037-3b83c2991d39)<h1 align="center">
   <br>
   <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/49c212ba-5af8-4cc0-9707-421b4076db84" alt="Music Party" width="200">
   
@@ -36,31 +36,9 @@
 
 <h2 id="#introduction">Introduction👋</h2>
 
-> Schools are supposed to be a place where quality education, integration, and safety are provided, in the best of circumstances, they will be a place that leads everyone to a promising future. However, schools are no longer truly safe, as they can be a place of bullying, sexual harassment, physical punishment, verbal abuse, and other forms of violence, including school shootings.
+> Music Party is the ultimate platform for streaming and enjoying your favorite tunes, offering a diverse library across all genres. But it's more than just a music service — Music Party brings people together with its unique feature that allows users to join virtual rooms and listen to music in real-time with friends, family, or fellow music enthusiasts.
 
-ProtectED is a project aimed at `addressing` the issue of school violence, `minimizing` all forms of violence, and `ensuring` the safety of students both physically and mentally.
-
-**`SUSTAINABLE DEVELOPMENT GOALS`**
-
-We submit our solution in `GDSC SOLUTION CHALLENGE 2023` using Google technologies, in accordance with 3️⃣ [United Nations 17 Sustainable Development Goals](https://developers.google.com/community/gdsc-solution-challenge/UN-goals)
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/90759146/229423927-dd77d940-3add-49c3-af2c-1907fe199baf.png" alt="Goal 3 - Good Healthy and Well-being" width="100">
-  <img src="https://user-images.githubusercontent.com/90759146/229425267-9087b6d3-9db1-48df-a1ee-80ed5a881eb3.png" alt="Goal 4 - Quality Education" width="100">
-  <img src="https://user-images.githubusercontent.com/90759146/229424031-e0db4855-739b-481c-bcad-3cb3a7d468b1.png" alt="Goal 16 - Peace, Justice and Strong Institutions" width="100"> 
-</p>
-
-**`VIDEO`**
-
-<h4 align="center">
-  <br>
-  <img src="https://user-images.githubusercontent.com/90759146/229980887-8787928b-063f-49ac-a479-87e730039a35.png" alt="ProtectED" width="600">
-  <br>
-  <br>
-  <p>🏫 <a href="https://www.youtube.com/watch?v=SqusC-f3Rhc">ProtectED - GDSC Solution Challenge 2023</a> 🏫</p> 
-  <br>
-  <br>
-</h4>
+Music Party is a project aimed at `redefining` the `music streaming experience` by connecting users in `real-time virtual rooms`, fostering shared musical moments and connections.
 
 <h2 id="get-started">Get Started⚙️</h2>
 1. Open a terminal on your machine. 
@@ -68,54 +46,48 @@ We submit our solution in `GDSC SOLUTION CHALLENGE 2023` using Google technologi
 3. Run the following command to clone the code:
 
 ```
-git clone https://github.com/GDSC-UIT/school_violence
+git clone https://github.com/cmwuaan/music-party-frontend
 ```
 
 4. Once the code is cloned, navigate into the project directory using the following command:
 
 ```
-cd school_violence
+cd music-party-frontend
 ```
 
 5. Next, you need to install any dependencies required by the project. To do this, run the following command:
 
 ```
-flutter pub get
+npm install
 ```
 
 6. Finally, you can run the project using the following command and enjoy it!🎉🎉🎉
 
 ```
-flutter run
+npm start
 ```
 
 <h2 id="usage">Usage📱</h2>
 
-ProtectED has developed 2 main features to address the issue, including `Chat with Expert` and `SOS`. `SOS` has 2 modes, `Violence mode` is used in the case of regular school violence, and `School Shooting mode` is used in the case of more dangerous situations, such as school shootings.
+Music Party has developed 2 main features to address the issue, including `Listen everywhere` and `Music streaming`
 
-**`CHAT WITH EXPERT`**
+**`LISTEN EVERYWHERE`**
 
-> Experts (such as teachers at the user's school) provided very good perspectives and solutions to situations that were in line with reality.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/90759146/229432287-c82347c7-80ff-4b0f-bc41-4bec7476c344.png" alt="Chat - Step 1" width="200">
-  <img src="https://user-images.githubusercontent.com/90759146/229432299-5da6c7fc-9b12-4349-85c6-27781e93862f.png" alt="Chat - Step 2" width="200">
-</p>
-
-**`SOS`**
-
-> Provides many opportunities to self-rescue in dangerous school violence situations.
+> Discover, share, and enjoy your favorite tunes with our seamless listening feature.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/90759146/229439594-23226e88-c931-4aa2-b062-481365890ea5.png" alt="Help - Mode 1" width="200">
-  <img src="https://user-images.githubusercontent.com/90759146/229439866-b82b32ea-afab-4a2c-ba2f-36e4c5ddb5e1.png" alt="Help - Mode 1" width="200">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/bef88d64-c810-4014-844a-bd78c3b7bad1" alt="About" width="200">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/5880afc1-9abb-452a-8234-0974aa1b6e81" alt="Home" width="200">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/60b6e9c5-ec97-4b99-9494-bba4f72d34e5" alt="Album details" width="200">
 </p>
-<p align="center">Mode 1</p>
+
+**`MUSIC STREAMING`**
+
+> Immerse yourself in the ultimate music experience with our seamless streaming feature, allowing you to listen to your favorite tracks in real-time.
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/90759146/229439959-fe490fed-a88e-49f1-83e2-a8aa5ff2bea7.png" alt="Help - Mode 2" width="200">
-  <img src="https://user-images.githubusercontent.com/90759146/229439984-e48c31c3-2528-4a52-b8ca-2a046cf4a74a.png" alt="Help - Mode 2" width="200">
+  <img src="https://github.com/cmwuaan/music-party-frontend/assets/90759146/7828e8e3-5994-4988-baac-67fb3a8ccdf1" alt="Music streaming" width="200">
 </p>
-<p align="center">Mode 2</p>
 
 <h2 id="technologies">Technologies🤖</h2>
 
