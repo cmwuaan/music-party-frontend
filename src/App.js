@@ -12,6 +12,7 @@ import AllUploadSong from './pages/AllUploadSongs';
 import { Route, Routes } from 'react-router-dom';
 import Upload from './pages/Upload';
 import Header from './components/Header';
+import SongDetail from './pages/SongDetail';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/room-detail" element={<RoomDetails />} />
           <Route path="/profile" element={<Profile />} />
           <Route path='/album-detail' element={<AlbumDetail/>}/>
+          <Route path='/song-detail' element={<SongDetail/>}/>
           <Route path="/account-settings" element={<AccountSettings />} />
           <Route path="/all-playlists" element={<AllPlaylists />} />
           <Route path="/all-upload-songs" element={<AllUploadSong />} />

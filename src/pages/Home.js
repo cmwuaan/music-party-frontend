@@ -4,7 +4,7 @@ import ArtistCard from '../components/ArtistCard';
 import AlbumCard from '../components/AlbumCard';
 
 function Home() {
-  const maxRenderElement = 5;
+  const maxRenderElement = 6;
   const Data = [
     {
       imgUrl: 'https://i.pinimg.com/564x/17/d8/ff/17d8ff4be178c4cddb05630000420910.jpg',
