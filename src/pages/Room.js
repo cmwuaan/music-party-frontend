@@ -14,6 +14,26 @@ function Room() {
   //     <Link to="/roomdetail">View Room Detail</Link>;
   //   };
 
+  const [username, setUsername] = useState('');
+    const [roomId, setRoomId] = useState('');
+
+  const joinRoom = () => {
+      setUsername("username")
+    if (!username) {
+      alert('Please enter your username');
+      return;
+    }
+    if (!roomId) {
+      alert('Please enter room ID');
+      return;
+    }
+        window.location.href = `/room-detail/${roomId}?username=${username}`;
+  };
+      const handleChange = (e) => {
+        setRoomId(e.target.value);
+    };
+  
+
   return (
     <div>
       <div className="bg-black opacity-90 text-white">
@@ -28,16 +48,16 @@ function Room() {
           <div className="text-2xl font-bold text-center ">It's great to see you again.</div>
           <p className="text-xs font-semibold text-gray-400">Have a room code? Join a room with it:</p>
           <div className="flex">
-            <input
-              type="text"
-              placeholder="XXXXXX"
-              value={''}
-              onChange={() => {}}
-              className=" rounded-l-lg text-sm font-bold w-64 px-8 py-4 focus:outline-none focus:ring-1 focus:ring-gray-400 bg-[#181818] "
-            />
+              <input
+                  type="text"
+                  placeholder="Enter room ID"
+                  value={roomId}
+                  onChange={handleChange}
+                  className="rounded-l-lg text-sm font-bold w-64 px-8 py-4 focus:outline-none focus:ring-1 focus:ring-gray-400 bg-[#181818]"
+              />
             <button
               className="bg-gradient-to-r bg-green-500 text-white font-medium rounded-r-lg px-6 py-2"
-              onClick={() => {}}
+              onClick={joinRoom}
             >
               Join
             </button>

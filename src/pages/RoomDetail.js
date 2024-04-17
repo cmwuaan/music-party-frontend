@@ -1,8 +1,85 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
+import io from 'socket.io-client';
 
+const socket = io('http://localhost:5000');
 const RoomDetails = () => {
+   const { roomId } = useParams();
+    const location = useLocation();
+    const [username, setUsername] = useState('');
+    const [message, setMessage] = useState('');
+    const [messages, setMessages] = useState([]);
+    const [validRoomId, setValidRoomId] = useState(true);
+
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const usernameParam = queryParams.get('username');
+        if (usernameParam) {
+            setUsername(usernameParam);
+        } else {
+            window.location.href = '/'; // Chuyển hướng về trang Room nếu thiếu thông tin username
+        }
+    }, [location.search]);
+
+useEffect(() => {
+    socket.on('message', (data) => {
+        setMessages(prevMessages => [...prevMessages, data]); // Sử dụng callback để đảm bảo sử dụng phiên bản mới nhất của state
+    });
+
+    socket.on('connect', () => {
+        console.log('Connected to server successfully!');
+    });
+
+    socket.emit('joinRoom', { username, roomId }); // Tham gia phòng ngay khi component được mount
+
+    return () => {
+        socket.disconnect();
+    };
+}, []);
+
+
+    useEffect(() => {
+        socket.on('connect', () => {
+            console.log('Connected to server successfully!');
+        });
+
+        if (!roomId) {
+            setValidRoomId(false);
+        }
+
+        return () => {
+            socket.disconnect();
+        };
+    }, [roomId]);
+
+    const sendMessage = () => {
+        console.log('Sending message...');
+        socket.emit('sendMessage', { roomId, username, message });
+        setMessage('');
+        // Thêm tin nhắn mới vào danh sách tin nhắn để nó xuất hiện trên màn hình
+        setMessages(prevMessages => [...prevMessages, { username, message }]);
+    };
+
   return (
     <div className="w-screen h-screen flex overflow-hidden max-h-screen">
+      <div>
+            {validRoomId ? (
+                <>
+                    <h1>Room Detail - ID: {roomId}</h1>
+                    <div>
+                        {messages.map((msg, index) => (
+                            <div key={index}>
+                                <strong>{msg.username}:</strong> {msg.message}
+                            </div>
+                        ))}
+                    </div>
+                    <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type your message" />
+                    <button onClick={sendMessage}>Send</button>
+                </>
+            ) : (
+                <h1>Invalid Room ID</h1>
+            )}
+        </div>
       <div className="w-[70%] bg-black text-white">
         <div className="flex items-center text-3xl font-bold py-8 w-full gap-96">
           <i

@@ -27,7 +27,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/room" element={<Room />} />
-          <Route path="/room-detail" element={<RoomDetails />} />
+          <Route path="/room-detail/:roomId" element={<RoomDetails />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/album-detail" element={<AlbumDetail />} />
           <Route path="/account-settings" element={<AccountSettings />} />
