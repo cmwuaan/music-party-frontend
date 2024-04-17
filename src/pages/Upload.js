@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 import { IoMdCloudUpload } from 'react-icons/io';
-
+import axios from 'axios';
 const Upload = () => {
   const [loading, setLoading] = useState(false);
   const audioRef = useRef(null);
@@ -98,35 +98,54 @@ const Upload = () => {
     }
   };
 
-  const handleUploadMusic = async (e) => {
-    e.preventDefault();
-    if (!isEnableUpload) {
-      console.log('Block');
-      return;
-    }
-    if (!selectedImage || !selectedMusic) {
-      toast.warn('Please add your music Image!');
-      return;
-    }
-    SetIsEnableUpload(false);
-    console.log(musicGerne.label);
-    const gerne = [];
-    musicGerne.map((music, index) => {
-      gerne.push(music.label);
+const handleUploadMusic = async (e) => {
+  e.preventDefault();
+
+  // Kiểm tra xem tất cả các dữ liệu cần thiết đã được nhập chưa
+  // theem || !musicGerne.length
+  if (!selectedImage || !selectedMusic || !musicName || !artist  || !description || !lyrics) {
+    toast.warn('Please fill in all required fields!');
+    console.log("selectedImage", selectedImage)
+    console.log("selectedMusic", selectedMusic)
+    console.log("musicName", musicName)
+    console.log("artist", artist)
+    console.log("musicGerne", musicGerne)
+    console.log("description", description)
+    console.log("lyrics", lyrics)
+    return;
+  }
+
+  // Tạo một đối tượng FormData để gửi dữ liệu và tệp
+  const formData = new FormData();
+  formData.append('musicName', musicName);
+  formData.append('author', artist);
+  formData.append('description', description);
+  formData.append('lyrics', lyrics);
+  formData.append('releaseYear', new Date().getFullYear());
+  formData.append('musicFile', selectedMusic);
+  formData.append('imageFile', selectedImage);
+  formData.append('genre', "tesst")
+  // musicGerne.forEach((genre) => {
+  //   formData.append('genre', genre.label);
+  // });
+
+  try {
+    // Gửi yêu cầu POST đến API
+    const response = await axios.post('http://localhost:5000/api/musics/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data', // Đảm bảo cài đặt header đúng cho dữ liệu FormData
+      },
     });
-    const music = {
-      musicName: musicName,
-      genre: gerne,
-      author: artist,
-      lyrics: lyrics,
-      duration: duration,
-      description: description,
-      releaseYear: new Date().getFullYear(),
-      musicPrivacyType: selectedPrivacy,
-    };
-    setLoading(true); // Set loading to true when starting the upload process
-    SetIsEnableUpload(true);
-  };
+    
+    // Xử lý phản hồi từ server nếu cần
+    console.log('Upload successful:', response.data);
+    // Nếu cần thực hiện thêm hành động sau khi upload thành công, ví dụ: hiển thị thông báo, chuyển hướng người dùng, v.v.
+  } catch (error) {
+    // Xử lý lỗi nếu có
+    console.error('Upload failed:', error);
+    // Nếu cần hiển thị thông báo hoặc xử lý lỗi khác
+  }
+};
   const colorStyles = {
     control: (styles) => {
       return {
