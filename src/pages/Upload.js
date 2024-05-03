@@ -230,9 +230,9 @@ const Upload = () => {
                         ) : (
                             <form
                                 onSubmit={handleUploadMusic}
-                                className=' flex flex-col text-xs md:text-base border border-gray-800 rounded shadow bg-[#181818] my-20 px-4 '
+                                className=' flex flex-col text-xs md:text-base border border-gray-800 rounded shadow bg-[#181818] my-4 px-4 '
                             >
-                                <div className='flex flex-row justify-between mt-14 md:px-16 gap-8'>
+                                <div className='flex flex-col items-center md:items-start md:flex-row justify-between mt-14 md:px-16 md:gap-6 gap-10'>
                                     <input
                                         type='file'
                                         onChange={onImageChange}
@@ -430,7 +430,7 @@ const Upload = () => {
                                     </div>
                                 </div>
                                 <div className='flex justify-between px-16 mt-4 py-4 items-center border-gray-800 border-t-[1px]'>
-                                    <div className='flex items-center gap-1'>
+                                    <div className='items-center gap-1 hidden md:flex'>
                                         <span className='text-red-600'>*</span>
                                         <p className='text-xs font-bold'>
                                             Require field
