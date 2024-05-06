@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import io from 'socket.io-client';
+import FormMessage from '../components/ChatApp/FormMessage';
+import user from '../assets/images/user.jpg'
+
 
 const socket = io('http://localhost:5000');
 const RoomDetails = () => {
@@ -61,49 +64,9 @@ useEffect(() => {
     };
 
   return (
-    <div className="w-screen h-screen flex overflow-hidden max-h-screen">
-      <div>
-            {validRoomId ? (
-                <>
-                    <h1>Room Detail - ID: {roomId}</h1>
-                    <div>
-                        {messages.map((msg, index) => (
-                            <div key={index}>
-                                <strong>{msg.username}:</strong> {msg.message}
-                            </div>
-                        ))}
-                    </div>
-                    <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type your message" />
-                    <button onClick={sendMessage}>Send</button>
-                </>
-            ) : (
-                <h1>Invalid Room ID</h1>
-            )}
-        </div>
-      <div className="w-[70%] bg-black text-white">
-        <div className="flex items-center text-3xl font-bold py-8 w-full gap-96">
-          <i
-            className="ri-arrow-left-s-line cursor-pointer text-2xl text-white rounded-full bg-slate-700 px-3 py-2 hover:bg-slate-600 ml-8"
-            onClick={() => {}}
-          ></i>
-          <div className="border flex flex-col gap-2 items-center border-gray-700 py-2 px-6 text-white bg-gray-800 rounded">
-            <p className="text-xl">Name's Room</p>
-            <p className="text-xs text-gray-400">ID: 1234</p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-3 ml-28 ">
-          <p className="text-xl font-bold text-gray-400 ">Chat Box</p>
-          <div className="flex gap-2 items-center">
-            <p className="flex justify-center items-center w-5 h-5 rounded-full bg-green-500 text-xs font-bold ">10</p>
-            <p className="text-xs font-bold">Online</p>
-          </div>
-        </div>
+    <div className="w-full h-full flex  max-h-screen">
+      <FormMessage/>
 
-        <div className="max-h-[50%] overflow-y-auto ">
-          {/* <ChatBox messages= {listMessage}/>
-          <MessageForm idRoom={room._id} onAddMessage = {callBackAddMessage}/> */}
-        </div>
-      </div>
       <div className="w-[30%] bg-black opacity-90 text-white px-8 pb-20">
         <div className="flex flex-row justify-between items-center">
           <p className="my-8 font-bold text-xl">Songs in Queue</p>

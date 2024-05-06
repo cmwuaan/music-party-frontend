@@ -13,6 +13,8 @@ import { Route, Routes } from 'react-router-dom';
 import Upload from './pages/Upload';
 import Header from './components/Header';
 import ScrollBehavior from './components/ScrollBehavior';
+import Message  from './components/ChatApp/Message';
+
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/upload" element={<Upload />} />
+          <Route path="/message" element={<Message />} />
+
           <Route path="/room" element={<Room />} />
           <Route path="/room-detail/:roomId" element={<RoomDetails />} />
           <Route path="/profile" element={<Profile />} />
