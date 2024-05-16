@@ -15,6 +15,7 @@ const FormMessage = (params) => {
     const [messages, setMessages] = useState([]);
     const [validRoomId, setValidRoomId] = useState(true);
     const containerRef = useRef(null);
+    const [isMe, setIsMe] = useState(false)
 
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
@@ -37,6 +38,7 @@ const FormMessage = (params) => {
 
         socket.emit('joinRoom', { username, roomId }); // Tham gia phòng ngay khi component được mount
 
+
         return () => {
             socket.disconnect();
         };
@@ -46,13 +48,16 @@ const FormMessage = (params) => {
           sendMessage();
         }
       };
+    useEffect(()=>{
+        containerRef.current.scrollTop = containerRef.current.scrollHeight;
+
+    },[messages])
     const sendMessage = () => {
         console.log('Sending message...');
         socket.emit('sendMessage', { roomId, username, message });
         setMessage('');
         // Thêm tin nhắn mới vào danh sách tin nhắn để nó xuất hiện trên màn hình
-        setMessages(prevMessages => [...prevMessages, { username, message }]);
-        containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        // setMessages(prevMessages => [...prevMessages, { username, message }]);
     };
   return (
     <div className="relative w-[70%] bg-transparent mb-8  text-white">
@@ -77,7 +82,7 @@ const FormMessage = (params) => {
                     <div>
                         {messages.map((msg, index) => (
                             <div>
-                            <Message name={msg.username} avar={user} message={msg.message} isMe={index%2}/>
+                            <Message name={msg.username} avar={user} message={msg.message} isMe={username === msg.username?true:false}/>
                             {/* <div key={index}>
                                 <strong>{msg.username}:</strong> {msg.message}
                             </div> */}
