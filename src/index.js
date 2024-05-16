@@ -2,23 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import store from './redux/store';
-import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import reportWebVitals from './reportWebVitals';
-
-const router = createBrowserRouter([
-  {
-    path: '*',
-    element: <App />,
-  },
-]);
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthProvider } from './utils/AuthContext';
+import { MusicContextProvider } from './utils/MusicContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <Router>
+      <AuthProvider>
+        <MusicContextProvider>
+          <App />
+        </MusicContextProvider>
+      </AuthProvider>
+    </Router>
   </React.StrictMode>
 );
 // reportWebVitals();

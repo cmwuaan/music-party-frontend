@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from '../components/Button';
 import ToggleButton from '../components/ToggleButton';
 import { FaGoogle } from 'react-icons/fa';
@@ -5,7 +6,29 @@ import { FaFacebook } from 'react-icons/fa';
 import { FaApple } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import { loginUser } from '../http';
+
 function Signin() {
+  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
+
+  function emailChangeHandler(event) {
+    setEnteredEmail(event.target.value);
+  }
+
+  function passwordChangeHandler(event) {
+    setEnteredPassword(event.target.value);
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setEnteredEmail('');
+    setEnteredPassword('');
+    const loginData = { email: enteredEmail, password: enteredPassword };
+    const response = await loginUser(loginData);
+    console.log(response);
+  };
+
   return (
     <>
       <div className="flex flex-col items-center mt-4">
@@ -32,7 +55,7 @@ function Signin() {
           <Button className={'border-solid border-[1px]'} onClick={() => {}} title={'Login with number phone'} />
         </div>
         <div className="w-[380px] py-[0.4px] bg-gray-600 mt-8 opacity-50"></div>
-        <form action="" className="flex flex-col w-[380px] gap-4">
+        <form action="submit" className="flex flex-col w-[380px] gap-4">
           <div className="flex flex-col mt-4">
             <label className="font-medium" htmlFor="email">
               Email or username
@@ -42,7 +65,9 @@ function Signin() {
               id="email"
               type="text"
               name="email"
+              onChange={emailChangeHandler}
               placeholder="Email or username"
+              value={enteredEmail}
             />
           </div>
           <div className="flex flex-col">
@@ -53,8 +78,10 @@ function Signin() {
               className="h-10 rounded-[4px] bg-transparent border border-gray-500 pl-2 mt-2 text-white"
               id="password"
               name="password"
-              type="text"
+              type="password"
+              onChange={passwordChangeHandler}
               placeholder="Password"
+              value={enteredPassword}
             />
           </div>
           <div className="flex items-center gap-2">
@@ -63,7 +90,7 @@ function Signin() {
           </div>
           <Button
             className={'bg-green-500 text-black text-xl font-semibold my-6'}
-            onClick={() => {}}
+            onClick={handleSubmit}
             title={'Log In'}
           />
         </form>

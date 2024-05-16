@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 function RoomModal({ onToggleModal }) {
   const closeCreateModal = () => {
     onToggleModal();
